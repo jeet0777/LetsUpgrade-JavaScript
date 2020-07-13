@@ -1,1 +1,66 @@
+<html>
+<head>
+    <title>Assignment Day 2 13th july</title>
+</head>    
 
+<body>
+<h6><h4>Question 1:</h4> Write a javascript program to Display the current day and time in the follwing format<br>
+Sample Output:Today is : Tuesday
+<br>
+current time is : 10pm 30:30<br> 
+</h6>
+<b>Output:-</b>
+
+<br>
+
+
+<p id="curday"> </p>
+<p id="curtime"> </p>
+
+<!--
+output will be like this 
+Today is: Tuesday
+
+Current time is: 1 AM: 20 58
+-->
+
+<h6><h4>Question 2:</h4> Write a javascript program to print the content of Window</h6><br><b>Output:-</b><br>
+
+<button onclick="window.print()"  > print</button>
+
+<br/>
+<!--
+on BUtton Click the print dialogue will be visible 
+-->
+
+<h6><h4>Question 3:</h4> Write a javascript program to get the current Date</h6><br>
+Expected Output: mm-dd-yy ,mm/dd/yy or dd-mm-yyyy,dd/mm/yyyy
+<b>Output:-</b><br>
+<p id="getdate">
+
+</p>
+<!--
+output will be like this 
+14/6/2020
+-->
+
+<script lang="javascript">
+var d=new Date();
+var days = d.getDay();
+var Allday = ['Sunday', 'Monday', 'Tuesday', 
+            'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+document.getElementById("curday").innerHTML="Today is: "+Allday[days];
+
+
+var hrs=(d.getHours()>=12)? "PM":"AM";
+var timez=(d.getHours()>12)? d.getHours-12:d.getHours();
+
+document.getElementById("curtime").innerHTML="Current time is: "+timez+"  "+hrs+ " :" +" "+d.getMinutes()+" : "+d.getSeconds();
+
+document.getElementById("getdate").innerHTML=d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear();;
+
+</script>
+
+</body>
+
+<html>
