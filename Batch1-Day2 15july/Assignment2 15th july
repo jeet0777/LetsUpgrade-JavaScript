@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day 2 15th july</title>
+</head>
+<body>
+    <h3>Question 1</h3>
+    write a js code which takes input from the user and logs it in the console.<br/>
+    <B>Answer:</B><br><br>
+    <button onclick="takeinput()">click here for the input</button>
+    <h3>Question 2</h3>
+    Explain with Example the remaining methods of String and array.<br>
+    <pre>
+        <b>String Methods</b>
+        <ol type="1" start="1">
+    <li>charCodeAt():   Returns the Unicode of the character at the specified index
+            
+                var str = "HELLO WORLD";
+                var n = str.charCodeAt(0);//Output will be 72 as the unicode of the index 0's value(H)will be 72
+                document.write(n);
+            </li>
+    <li>fromCharCode(): 	Converts Unicode values to characters
+            var res = String.fromCharCode(65);
+            document.write(res);//Outpurt will be A
+    </li>
+    <li>includes():     Checks whether a string contains the specified string/characters
+            var str = "Hello world, welcome to the universe.";
+            var n = str.includes("world");
+            document.write(n);//here true will be return
+
+
+    </li>
+    <li>localeCompare():    Compares two strings in the current locale
+            var str1 = "ab";
+            var str2 = "cd";
+            var n = str1.localeCompare(str2);//both strings are different so Output` will be -1
+            document.write(n);
+            
+
+    </li>
+    <li>match():    Searches a string for a match against a regular expression, and returns the matches</li>
+        var str = "The rain in SPAIN stays mainly in the plain";
+        var res = str.match(/ain/g);
+        document.write(res);//output will be ain,ain,ain
+    
+   <li>repeat():    Returns a new string with a specified number of copies of an existing string
+                var str = "Hello world!";
+                //str.repeat(2);
+                document.write(str.repeat(2)); // outpur =t will be Hello world!Hello world!              
+        </li>
+    <li>search():    Searches a string for a specified value, or regular expression, and returns the position of the match
+            var str = "Visit W3Schools!";
+            var n = str.search("W3Schools");//here it will return 6 
+
+    </li>
+    <li>slice():    Extracts a part of a string and returns a new string
+            var str = "Hello world!";
+            var res = str.slice(0, 5);//res contains Hello 
+
+    </li>
+    <li>substr():   Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+            var str = "Hello world!";
+            var res = str.substr(1, 4);//here from first parameter represents starting index where as 2nd parameter represents ending index so the returned 
+                                        //part will be ello
+    </li>
+    <li>valueOf():  Returns the primitive value of a String object
+            var str = "Hello World!";
+            var res = str.valueOf();//here output will be Hello World!
+    </li>
+        </ol>
+
+
+<Button onclick="liveDemo()">LIve Demo</Button>
+    </pre>
+    <h3>Question 3</h3>
+ <pre>
+
+    Ask the user if if he is 21+ and log the value "can drink","Cannot drink".
+<B>Answer:</B>
+<button onclick="tryage()">click here </button>
+
+ </pre>
+    
+
+    <script lang="javascript">
+    function takeinput(){
+
+        let p=prompt("enter your input");
+        console.log(p);
+    }
+function liveDemo(){
+    var str = "HELLO WORLD";
+                var n = str.charCodeAt(0);//Output will be 72 as the unicode of the index 0's value(H)will be 72
+                document.write(n);
+    
+                var res = String.fromCharCode(65);
+            document.write(res);//Outpurt will be A
+            document.write("<br/>")
+ 
+            var str = "Hello world, welcome to the universe.";
+            var n = str.includes("world");
+            document.write(n);//here true will be return
+            document.write("<br/>")
+ 
+
+            var str1 = "ab";
+            var str2 = "cd";
+            var n = str1.localeCompare(str2);//both strings are different so Output` will be -1
+            document.write(n);
+            document.write("<br/>")
+       
+            var str = "The rain in SPAIN stays mainly in the plain";
+        var res = str.match(/ain/g);
+        document.write(res);//output will be ain,ain,ain
+        document.write("<br/>")
+ 
+        var str = "Hello world!";
+                //str.repeat(2);
+                document.write(str.repeat(2)); // outpur =t will be Hello world!Hello world!              
+                document.write("<br/>")
+  
+ 
+ 
+                var str = "Visit W3Schools!";
+            var n = str.search("W3Schools");//here it will return 6 
+            document.write(n);
+            document.write("<br/>")
+ 
+ 
+            var str = "Hello world!";
+            var res = str.slice(0, 5);//res contains Hello 
+            document.write(res);
+            document.write("<br/>")
+   
+
+            var str = "Hello world!";
+            var res = str.substr(1, 4);//here from first parameter represents starting index where as 2nd parameter represents ending index so the returned 
+            document.write(res);
+            document.write("<br/>")
+ 
+ 
+            var str = "Hello World!";
+            var res = str.valueOf();//here output will be Hello World!
+            document.write(res);
+            document.write("<br/>")
+ }
+ function tryage(){
+
+let age=prompt("Enter your age","");
+
+if(age>21){
+
+console.log("Can drink");
+
+}
+else{
+    console.log("Cannot drink")
+}
+
+ }
+    </script>
+</body>
+</html>
