@@ -73,7 +73,7 @@
         </ol>
 
 
-<Button onclick="liveDemo()">LIve Demo</Button>
+<Button onclick="liveDemo()">Live Demo on console</Button>
     </pre>
     <h3>Question 3</h3>
  <pre>
@@ -94,59 +94,50 @@
 function liveDemo(){
     var str = "HELLO WORLD";
                 var n = str.charCodeAt(0);//Output will be 72 as the unicode of the index 0's value(H)will be 72
-                document.write(n);
-    
+                console.log(n);
                 var res = String.fromCharCode(65);
-            document.write(res);//Outpurt will be A
-            document.write("<br/>")
- 
+                console.log(res);
+      
+
             var str = "Hello world, welcome to the universe.";
             var n = str.includes("world");
-            document.write(n);//here true will be return
-            document.write("<br/>")
- 
+            console.log(n);
+      
 
             var str1 = "ab";
             var str2 = "cd";
             var n = str1.localeCompare(str2);//both strings are different so Output` will be -1
-            document.write(n);
-            document.write("<br/>")
-       
+            console.log(n);
+           
             var str = "The rain in SPAIN stays mainly in the plain";
         var res = str.match(/ain/g);
-        document.write(res);//output will be ain,ain,ain
-        document.write("<br/>")
- 
+        console.log(res);
+        
         var str = "Hello world!";
                 //str.repeat(2);
-                document.write(str.repeat(2)); // outpur =t will be Hello world!Hello world!              
-                document.write("<br/>")
-  
+                console.log(str.repeat(2));
+      
  
  
                 var str = "Visit W3Schools!";
             var n = str.search("W3Schools");//here it will return 6 
-            document.write(n);
-            document.write("<br/>")
- 
+            console.log(n);
+      
  
             var str = "Hello world!";
             var res = str.slice(0, 5);//res contains Hello 
-            document.write(res);
-            document.write("<br/>")
-   
-
+            console.log(res);
+        
             var str = "Hello world!";
             var res = str.substr(1, 4);//here from first parameter represents starting index where as 2nd parameter represents ending index so the returned 
-            document.write(res);
-            document.write("<br/>")
- 
+            console.log(res);
+      
  
             var str = "Hello World!";
             var res = str.valueOf();//here output will be Hello World!
-            document.write(res);
-            document.write("<br/>")
- }
+            console.log(res);
+      
+        }
  function tryage(){
 
 let age=prompt("Enter your age","");
