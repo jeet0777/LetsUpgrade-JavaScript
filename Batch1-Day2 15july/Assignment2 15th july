@@ -12,7 +12,7 @@
     <B>Answer:</B><br><br>
     <button onclick="takeinput()">click here for the input</button>
     <h3>Question 2</h3>
-    Explain with Example the remaining methods of String and array.<br>
+    Explain with Example the remaining methods of String.<br>
     <pre>
         <b>String Methods</b>
         <ol type="1" start="1">
