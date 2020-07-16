@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16th july Assignment Day 3</title>
+</head>
+<body>
+    
+<h3><pre>Question 1: 
+ 
+    Take a number from a user and write a function which checks whether the number is even or odd. Assign the result to a variable and log that variable in the console. 
+     
+    Example Input: 23 Output: The number entered is 23 and Number is odd</pre> </h3>
+<B><h2>Answer:</h2></B>
+<button onclick="odd_or_even()">click here</button>
+
+
+<h3><pre>Question 2: 
+    Write a program which will take OS name and version from the user separated by a space. Then log the OS name and version on the console. 
+ 
+    Input: "Android 9" Output: The OS name is Android and version is 9  
+ </pre> </h3>
+ <B><h2>Answer:</h2></B>
+<button onclick="getOsName()">Click here</button>
+
+ <h3><pre>Question 3: 
+    Write a program to take marks as input from the user and grade him accordingly. Use Conditional statements. Also the same code using switch or ternary 
+ 
+ 
+    input: 50 Output : Marks are 50 and grade is B 
+ 
+</pre> </h3>
+<B><h2>Answer:</h2></B>
+<button onclick="Mark()">Click here</button>
+
+<script lang="javascript">
+function odd_or_even(){
+let num=prompt("Enter a number to check it odd or even Result will be shown on console",0);
+let n=num%2;
+if(n==0){
+    console.log(`number is  even ${num}`);
+}else{
+    console.log(`number is  odd ${num}`);
+
+}
+
+}
+
+function getOsName(){
+let os=prompt("Enter your os name and version name should be seprated through space").split(" ")
+
+console.log(`the OS name is ${os[0]} and version is ${os[1]}`);
+}
+
+function Mark(){
+
+    let mark=0;
+    mark=prompt("Enter your Mark :",0);
+
+console.log("using if else");
+if(mark>100){
+    console.log("marks should 100 or under 100")
+}
+
+else if(mark>50 && mark<100){    console.log(`congratulation you got Grade A`);
+}
+else if(mark==50){
+    console.log("Marks are 50 and grade is B");
+}
+else if(mark<50 && mark>35){
+    console.log(`marks are ${mark} and grade is c`)
+}
+else{
+    console.log(`marks are ${mark} sorry you failed`)
+
+}
+console.log("using Switch");
+let n=parseInt(mark);
+let A=n>50;
+switch(n){
+case 50 : console.log(`marks are ${mark} and grade is B`);
+            break;
+case A: 
+// case  n<100: 
+console.log(`congratulation you got Grade A`);break;
+case (n>100): console.log("marks should 100 or under 100");break;
+
+case n<50: 
+case  n>35: console.log(`marks are ${mark} and grade is c`);
+         break;
+
+case n<35 : console.log(`marks are ${mark} `);
+default: console.log('we can not use logical operator direcly in to switch so ..',mark)
+
+}
+}
+</script>
+</body>
+</html>
