@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 21july Assignment</title>
+<style>
+.dark{
+    color:white ;
+    background-color: black;
+
+}
+</style>
+</head>
+<body>
+    <p id="clock" style="position: fixed; align-self:center;" >00:00:00</p>
+
+    <h3>
+    <pre>
+        Question 1: 
+Write a program that will iterate over an array of colors and change the background of the page after 5 seconds. 
+    </pre> 
+    </h3>
+<b>Answer:</b><span style="visibility: hidden; "id="sp"></span><br>
+<button onclick="colorChanger()">try it </button>
+<hr>
+<h3>
+    <pre>
+        Question 2: 
+        Write a program that will display the multiplication table of a number on the webpage in a proper format. Take the input from the user. 
+Input - 5 
+Output - 5 x 1 = 5 
+        5 x 2 = 10  
+        and so on
+    </pre> 
+    </h3>
+<b>Answer:</b><br>
+<button onclick="tabledata()">click here</button>
+<table border="3"  style="visibility:hidden;" id="maintable"></table>
+<hr>
+<h3>
+    <pre>
+        Question 3: 
+Make a webpage that will ask the name of the user. Then will display a welcome message on the webpage. Also the webpage should also have a clock. 
+Using the toggle method of classList add a dark mode feature to the website. 
+    </pre> 
+    </h3>
+<b>Answer:</b><br>
+<h1 id="welcome" style="visibility: hidden;"></h1>
+<button onclick="welcome()">click here</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="dark()">switch to dark mode</button>
+<script lang="javascript">
+
+function colorChanger(){
+
+let colorchange=['red','cyan','grey'];
+
+let count=0;
+function ch(){//this is will called based on intervaland as per the counter value the color will be changed
+    document.body.style.backgroundColor=colorchange[count];
+    count++;
+}
+setInterval(setc,1000);
+setInterval(ch,5000)
+}
+
+function tabledata(){
+    let getn=prompt("enter a number to get a multiplicationo table");
+document.getElementById('maintable').style.visibility='visible';
+ let row=document.getElementById('maintable');
+     for(i=1;i<=10;i++){
+         row.innerHTML+=`<tr><td style='margin:2px; padding:5px;'>${parseInt(getn)}x ${i}</td><td style='margin:2px; padding:10px;'> ${parseInt(getn*i)}</td></tr>`;
+         console.log(`<tr><td>${1}</td></tr>`);
+     }
+}
+
+function welcome(){
+
+document.getElementById('welcome').style.visibility='visible';
+
+let p=prompt('enter Your name','Stranger');
+
+document.getElementById('welcome').innerText=`welcome ${p}`;
+
+
+
+}
+let set=document.getElementById('clock');
+function setc(){
+
+    let d=new Date();
+    set.innerText=d.toLocaleTimeString();
+}
+setInterval(setc,1000);
+
+function dark(){
+  
+    document.body.classList.toggle('dark');
+}
+</script>
+</body>
+</html>
